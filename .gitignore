@@ -1,17 +1,52 @@
-# IDE
+# IDEs
 .vscode/
 .idea/
+*.iml
+*.ipr
+*.iws
+
+# Archivos temporales
 *.swp
 *.swo
+*.tmp
+*.temp
 
 # Maven
 target/
 log/
 
+# Gradle
+.gradle/
+build/
+
 # Archivos de sistema
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Archivos de aplicación
+# Logs
 *.log
-*.tmp
+
+# Archivos de configuración local
+*.properties
+*.env
+*.local
+
+# Archivos de compilación
+*.class
+*.jar
+*.war
+*.ear
+
+# Archivos de cobertura/test
+.coverage
+coverage/
+jacoco.exec
+test-output/
+
+# Archivos de sistema de control de versiones
+*.orig
+*.rej
+
+# Archivos de Docker
+*.pid
