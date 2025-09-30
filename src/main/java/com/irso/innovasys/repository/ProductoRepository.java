@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import com.irso.innovasys.entity.Producto;
 
 @Repository
-public interface ProductoRepository extends JpaRepository<Producto, Long> {
+public interface ProductoRepository extends JpaRepository<Producto, Integer> {
 }

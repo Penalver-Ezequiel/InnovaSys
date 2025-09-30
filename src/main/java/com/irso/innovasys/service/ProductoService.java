@@ -25,12 +25,12 @@ public class ProductoService {
     }
 
     // Buscar producto por ID
-    public Optional<Producto> obtenerProductoPorId(Long id) {
+    public Optional<Producto> obtenerProductoPorId(Integer id) {
         return productoRepository.findById(id);
     }
 
     // Eliminar producto por ID
-    public void eliminarProducto(Long id) {
+    public void eliminarProducto(Integer id) {
         productoRepository.deleteById(id);
     }
 }

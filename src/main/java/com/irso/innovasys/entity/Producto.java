@@ -18,12 +18,17 @@ public class Producto {
     @Column(nullable = false)
     private double stock;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "unidad_medida", nullable = false)
+    private UnidadMedida unidadMedida;
+
     public Producto() {}
 
-    public Producto(String nombre, double precioBase, double stock) {
+    public Producto(String nombre, double precioBase, double stock, UnidadMedida unidadMedida) {
         this.nombre = nombre;
         this.precioBase = precioBase;
         this.stock = stock;
+        this.unidadMedida = unidadMedida.UNIDAD;
     }
     
     public Integer getId() {
@@ -58,6 +63,14 @@ public class Producto {
         this.stock = stock;
     }
 
+    public void setUnidadMedida(UnidadMedida unidadMedida) { 
+        this.unidadMedida = unidadMedida;
+    }
+
+     public UnidadMedida getUnidadMedida() { 
+        return unidadMedida; 
+    }
+
     @Override
      public String toString() {
         return "Producto{" +
@@ -65,6 +78,7 @@ public class Producto {
                 ", nombre='" + nombre + '\'' +
                 ", precioBase=" + precioBase +
                 ", stock=" + stock +
+                ", unidadMedida=" + unidadMedida + 
                 '}';
     }  
   
